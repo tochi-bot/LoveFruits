@@ -1,6 +1,5 @@
-# Import the gspread library, which allows interaction with Google Sheets
+
 import gspread
-# Import the service_account module from the google.oauth2 library, which provides credentials for accessing Google APIs using service accounts
 from google.oauth2 import service_account
 
 # Define the scopes required for accessing Google Sheets and Google Drive APIs
@@ -21,17 +20,27 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 
 # Open the Google Sheet named "LoveFruits" using the authorized client and assign it to the SHEET variable
 SHEET = GSPREAD_CLIENT.open("LoveFruits")
-
-# Access the worksheet named "sales" within the opened Google Sheet and assign it to the sales variable
+# Access the "sales" worksheet within the "LoveFruits" spreadsheet
 sales = SHEET.worksheet("sales")
-
 # Retrieve all values from the "sales" worksheet and assign them to the data variable
 data = sales.get_all_values()
-
-# Print the retrieved data from the "sales" worksheet
+# Print the retrieved data
 print(data)
 
+def get_sales_info():
+    """ 
+    Get sales information from the user
+    """
+    # Prompt the user to enter sales information for the last market
+    print("Please enter sales information for the last market")
+    # Provide instructions for entering data
+    print("Data should be six numbers, separated by comma")
+    print("Example: 40,50,10,40,60,70\n")
+    # Receive input from the user
+    data_string = input("Enter your data here: ")
+    # Print the entered data string
+    print(data_string)
 
+# Call the get_sales_info function to prompt the user for input
+get_sales_info()
 
-import openpyxl  # Import the openpyxl library for working with Excel spreadsheets
-import os.path   # Import os.path module for filesystem path operations
