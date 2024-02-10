@@ -1,4 +1,3 @@
-
 import gspread
 from google.oauth2 import service_account
 
@@ -20,21 +19,37 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 
 # Open the Google Sheet named "LoveFruits" using the authorized client and assign it to the SHEET variable
 SHEET = GSPREAD_CLIENT.open("LoveFruits")
+
 # Access the "sales" worksheet within the "LoveFruits" spreadsheet
 sales = SHEET.worksheet("sales")
+
 # Retrieve all values from the "sales" worksheet and assign them to the data variable
 data = sales.get_all_values()
+
 # Print the retrieved data
 print(data)
 
-import gspread
-
 try:
-    # Access the "Sales" worksheet within the "LoveFruits" spreadsheet
+    # Attempt to access the "Sales" worksheet within the "LoveFruits" spreadsheet
     sales = SHEET.worksheet("Sales")
 except gspread.exceptions.WorksheetNotFound:
+    # If the worksheet is not found, print a message notifying the user
     print("Worksheet named 'Sales' not found in the 'LoveFruits' spreadsheet.")
     # Handle the error gracefully, such as creating the worksheet or notifying the user.
+
+try:
+    # Prompt the user to enter sales information for the last market
+    data_string = input("Please enter sales information for the last market (six numbers, separated by comma): ")
+    # Split the user input by comma and convert each value to an integer
+    values = [int(value.strip()) for value in data_string.split(',')]
+    # Check if the number of values entered is exactly 6
+    if len(values) != 6:
+        # If not, raise a ValueError with an appropriate message
+        raise ValueError(f"Exactly 6 values are required, you provided {len(values)}")
+except ValueError as e:
+    # If a ValueError occurs (e.g., incorrect number of values entered), print an error message
+    print(f"Invalid data: {e}, please try again\n")
+
 
 
 def get_sales_info():
@@ -50,7 +65,7 @@ def get_sales_info():
     data_string = input("Enter your data here: ")
     # Print the entered data string
     print(data_string)
+    return data_string
 
 # Call the get_sales_info function to prompt the user for input
 get_sales_info()
-
