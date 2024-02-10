@@ -29,6 +29,28 @@ data = sales.get_all_values()
 # Print the retrieved data
 print(data)
 
+
+def get_sales_info():
+    """ 
+    Get sales information from the user
+    """
+    while True:
+        # Prompt the user to enter sales information for the last market
+        print("Please enter sales information for the last market")
+        # Provide instructions for entering data
+        print("Data should be six numbers, separated by comma")
+        print("Example: 40,50,10,40,60,70\n")
+        # Receive input from the user
+        data_string = input("Enter your data here: ")
+        # Print the entered data string
+        print(data_string)
+        
+        if data_string:
+            print("Your data is valid!")
+            return data_string
+            break
+
+
 try:
     # Attempt to access the "Sales" worksheet within the "LoveFruits" spreadsheet
     sales = SHEET.worksheet("Sales")
@@ -49,23 +71,7 @@ try:
 except ValueError as e:
     # If a ValueError occurs (e.g., incorrect number of values entered), print an error message
     print(f"Invalid data: {e}, please try again\n")
-
-
-
-def get_sales_info():
-    """ 
-    Get sales information from the user
-    """
-    # Prompt the user to enter sales information for the last market
-    print("Please enter sales information for the last market")
-    # Provide instructions for entering data
-    print("Data should be six numbers, separated by comma")
-    print("Example: 40,50,10,40,60,70\n")
-    # Receive input from the user
-    data_string = input("Enter your data here: ")
-    # Print the entered data string
-    print(data_string)
-    return data_string
+    exit(1)
 
 # Call the get_sales_info function to prompt the user for input
 get_sales_info()
