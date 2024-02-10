@@ -47,8 +47,8 @@ def get_sales_info():
         
         if data_string:
             print("Your data is valid!")
-            return data_string
-            break
+            # Return a list of integers obtained by splitting the input string
+            return [int(value.strip()) for value in data_string.split(',')]
 
 
 try:
@@ -60,18 +60,26 @@ except gspread.exceptions.WorksheetNotFound:
     # Handle the error gracefully, such as creating the worksheet or notifying the user.
 
 try:
-    # Prompt the user to enter sales information for the last market
-    data_string = input("Please enter sales information for the last market (six numbers, separated by comma): ")
-    # Split the user input by comma and convert each value to an integer
-    values = [int(value.strip()) for value in data_string.split(',')]
+    # Call the get_sales_info function to prompt the user for input
+    data = get_sales_info()
     # Check if the number of values entered is exactly 6
-    if len(values) != 6:
+    if len(data) != 6:
         # If not, raise a ValueError with an appropriate message
-        raise ValueError(f"Exactly 6 values are required, you provided {len(values)}")
+        raise ValueError(f"Exactly 6 values are required, you provided {len(data)}")
 except ValueError as e:
     # If a ValueError occurs (e.g., incorrect number of values entered), print an error message
     print(f"Invalid data: {e}, please try again\n")
     exit(1)
 
-# Call the get_sales_info function to prompt the user for input
-get_sales_info()
+
+def sales_worksheet_update(data):
+    """ 
+    Update sales worksheet and add new row with list as provided
+    """
+    print("sales worksheet updating...\n")
+    sales_worksheet = SHEET.worksheet("sales")
+    sales_worksheet.append_row(data)
+    print("sales worksheet updated successfully")
+
+# Call the sales_worksheet_update function to update the sales worksheet with the provided data
+sales_worksheet_update(data)
