@@ -27,6 +27,16 @@ data = sales.get_all_values()
 # Print the retrieved data
 print(data)
 
+import gspread
+
+try:
+    # Access the "Sales" worksheet within the "LoveFruits" spreadsheet
+    sales = SHEET.worksheet("Sales")
+except gspread.exceptions.WorksheetNotFound:
+    print("Worksheet named 'Sales' not found in the 'LoveFruits' spreadsheet.")
+    # Handle the error gracefully, such as creating the worksheet or notifying the user.
+
+
 def get_sales_info():
     """ 
     Get sales information from the user
