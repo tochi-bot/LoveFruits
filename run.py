@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2 import service_account
+from pprint import pprint
 
 # Define the scopes required for accessing Google Sheets and Google Drive APIs
 SCOPE = [
@@ -82,4 +83,27 @@ def sales_worksheet_update(data):
     print("sales worksheet updated successfully")
 
 # Call the sales_worksheet_update function to update the sales worksheet with the provided data
-sales_worksheet_update(data)
+
+def surplus_data_calculation(sales_row):
+    """ 
+   
+    Compare sales with stock and calculate the surplus for each item type
+
+    A positive surplus indicates waste, meaning we've sold fewer items than what we had in stock.
+    Conversely, a negative surplus indicates extra revenue generated when stock was sold out, signifying high demand or efficient stock management.
+    """
+    print("Calculating surplus data...\n")
+    stock=SHEET.worksheet("stock").get_all_values()
+    stock_row=stock[-1]
+    print(stock_row)
+
+def main():
+    """
+
+    Run all programms functions.  
+    """
+    data = get_sales_info()
+    sales_worksheet_update(data)
+    surplus_data_calculation(data)
+print("Welcome to Love Fruits Automation")
+main()
