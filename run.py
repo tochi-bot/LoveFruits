@@ -72,54 +72,70 @@ except ValueError as e:
     print(f"Invalid data: {e}, please try again\n")
     exit(1)
 
-
 def sales_worksheet_update(data):
     """ 
-    Update sales worksheet and add new row with list as provided
+    Update sales worksheet with provided data.
+
+    Parameters:
+    data (list): List containing sales data to be appended as a new row in the sales worksheet.
     """
-       
-    print("sales worksheet updating...\n")
+    print("Sales worksheet updating...\n")
     sales_worksheet = SHEET.worksheet("sales")
     sales_worksheet.append_row(data)
-    print("sales worksheet updated successfully")
+    print("Sales worksheet updated successfully")
 
 def surplus_worksheet_update(data):
+    """
+    Update surplus worksheet with provided data.
+
+    Parameters:
+    data (list): List containing surplus data to be appended as a new row in the surplus worksheet.
+    """
     print("Surplus worksheet updating...\n")
     surplus_worksheet = SHEET.worksheet("surplus")
     surplus_worksheet.append_row(data)
     print("Surplus worksheet updated successfully")
 
-
-# Call the sales_worksheet_update function to update the sales worksheet with the provided data
+def workshet_update(worksheet,data):
+    """
+    Accepts a list of integers for insertion into the worksheet and
+    updates the corresponding worksheet with the provided data. 
+    """
+    print(f"Updating {worksheet} worksheet...\n")
+    worksheet_to_update=SHEET.worksheet(worksheet)
+    worksheet_to_update.append(data)
+    print(f"{worksheet} workheet updated successfully\n")
 
 def surplus_data_calculation(sales_row):
     """ 
-   
-    Compare sales with stock and calculate the surplus for each item type
+    Calculate surplus for each item type based on sales and stock data.
 
-    A positive surplus indicates waste, meaning we've sold fewer items than what we had in stock.
-    Conversely, a negative surplus indicates extra revenue generated when stock was sold out, signifying high demand or efficient stock management.
+    Parameters:
+    sales_row (list): List containing sales data for each item type.
+
+    Returns:
+    list: List containing calculated surplus for each item type.
     """
     print("Calculating surplus data...\n")
-    stock=SHEET.worksheet("stock").get_all_values()
-    stock_row=stock[-1]
-    print(f"Stock row:{stock_row}")
-    print(f"Sales row:{sales_row}")
-    surplus_data=[]
-    for stock, sales in zip (stock_row, sales_row):
-        surplus=int(stock)-sales
+    stock = SHEET.worksheet("stock").get_all_values()
+    stock_row = stock[-1]
+    print(f"Stock row: {stock_row}")
+    print(f"Sales row: {sales_row}")
+    surplus_data = []
+    for stock, sales in zip(stock_row, sales_row):
+        surplus = int(stock) - sales
         surplus_data.append(surplus)
     return surplus_data
 
 def main():
     """
-
-    Run all programms functions.  
+    Run all program functions.
     """
     data = get_sales_info()
     sales_worksheet_update(data)
-    new_surplus_data= surplus_data_calculation(data)
-    surplus_worksheet_update(data)
+    new_surplus_data = surplus_data_calculation(data)
+    surplus_worksheet_update(new_surplus_data)
     print(new_surplus_data)
+
 print("Welcome to Love Fruits Automation")
 main()
