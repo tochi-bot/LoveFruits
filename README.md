@@ -66,7 +66,7 @@ To ensure the robustness of the interface and the system's ability to handle inc
 
 ## Note on User Experience:
 
-For the optimal user experience, it is recommended to run the program on a tablet, laptop, or desktop. While the program is functional on mobile devices, the smaller screen size may make it challenging to read instructions and recommendations effectively.
+For the optimal user experience, I recommended running the program on a tablet, laptop, or desktop. While the program is functional on mobile devices, the smaller screen size may make it challenging to read instructions and recommendations effectively.
 ### Project Bugs and Solutions
 
 1. **Input Data Validation**
@@ -82,7 +82,7 @@ For the optimal user experience, it is recommended to run the program on a table
    - **Solution:** Refactor the code into smaller, modular functions with clearly defined responsibilities to enhance modularity and reusability.
 ### Deployment
 
-I would like to outline the necessary steps for deploying my application to Heroku. It's essential to note that Heroku serves as an excellent platform for managing and scaling back-end languages like Python. Deploying the work to Heroku will enable me to efficiently manage and scale our application as needed.
+Outline the necessary steps for deploying my application to Heroku. It's essential to note that Heroku serves as an excellent platform for managing and scaling back-end languages like Python. Deploying the work to Heroku will enable me to efficiently manage and scale our application as needed.
 
 Here are the steps for Heroku deployment:
 
@@ -103,3 +103,13 @@ Here are the steps for Heroku deployment:
 8. **Configure Environment Variables:** Configure API keys and build packs in the Heroku dashboard.
 
 Once you have completed these steps, your application should be successfully deployed to Heroku, and you can access it through the provided Heroku app link.
+### Credits
+
+#### Code
+- Code Institute Love Sandwiches Walkthrough
+- W3Schools Python Tutorial
+
+#### Acknowledgments
+- My mentor Rahul for his ongoing support and feedback
+- The Code Institute’s Tutor Support
+- The Slack community
