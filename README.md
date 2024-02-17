@@ -1,3 +1,6 @@
+
+![Responsive devices](https://github.com/tochi-bot/LoveFruits/assets/77632001/40769c60-56ea-451e-a06e-37fc90199d15)
+
 ### User Experience
 
 As the manager of our local fruit store, I constantly grapple with the challenges of efficiently managing our daily market sales. Our current system relies on manual recording of sales data, a process prone to errors and inefficiencies.
@@ -15,8 +18,14 @@ As a Python developer, I am committed to leveraging the Google Sheets API to dev
 #### Introductory Message and Sales Input
 
 When you start the system, you'll receive a warm welcome along with initial instructions. To begin, enter the sales information for your most recent market. Our user-friendly interface will lead you step by step, ensuring precise data entry for each fruit type. Remember to separate each value with a comma, without any spaces or pound signs. An example of the correct data entry format is provided for your convenience.
+![Screenshot 2024-02-17 160912](https://github.com/tochi-bot/LoveFruits/assets/77632001/7976eefe-8945-4fb0-a67e-ce531e94adaa)
+
 
 #### Update Sales and Surplus Worksheets
+
+![updated sales_worksheet](https://github.com/tochi-bot/LoveFruits/assets/77632001/903f42a6-bc0d-4b70-bcd8-551c4d4cd01b)
+
+![updated surplus](https://github.com/tochi-bot/LoveFruits/assets/77632001/13202163-bf59-4b77-95f0-4fea6aee3ad3)
 
 LoveFruits Automation seamlessly updates your sales and surplus worksheets in Google Sheets, keeping your records up-to-date and easily accessible.
 
@@ -27,6 +36,8 @@ Now that the Network Denial of Service (NDoS) team has reviewed the recommendati
 The Google worksheet is set to read-only for users without editing permissions. Only the NDoS team and senior management have the necessary access to modify the file. This precautionary measure is implemented to minimize the risk of inadvertent changes being made to the worksheet.
 
 #### Flowchart
+![Flowchart](https://github.com/tochi-bot/LoveFruits/assets/77632001/37a65b63-c8e1-4207-8610-3c6d8bf2d6e1)
+
 
 This flowchart represents the sequential execution of the main function. Each block represents a function call, and arrows indicate the flow of data and control from one step to another. The decision points are minimal in this particular code, so the flow is mostly linear.
 
