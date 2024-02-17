@@ -52,7 +52,34 @@ The worksheet serves as a repository for historical data entries as well as the 
 ![Worksheet Overview: Stock](image-2.png)
 
 ---
+# Testing
 
+To ensure the robustness of the interface and the system's ability to handle incorrect user input, comprehensive testing was conducted to cover all possible scenarios.
+
+## View tests conducted:
+
+- **Validator Testing:** The code was passed through PEP8, and no errors were found, ensuring compliance with Python coding standards.
+
+- **Browser Compatibility Testing:** Heroku was tested across multiple browsers including Google Chrome, Safari, Microsoft Edge, and Mozilla Firefox. The application functioned correctly as intended on all tested browsers.
+
+- **Mobile Device Testing:** The Heroku program was tested on various mobile devices including iPhone 11, Google Pixel 2, Motorola Edge, and Huawei P9 to ensure responsiveness and functionality across different screen sizes and resolutions.
+
+## Note on User Experience:
+
+For the optimal user experience, it is recommended to run the program on a tablet, laptop, or desktop. While the program is functional on mobile devices, the smaller screen size may make it challenging to read instructions and recommendations effectively.
+### Project Bugs and Solutions
+
+1. **Input Data Validation**
+   - **Bug:** Currently, the system accepts any input from the user as valid, even if it doesn't adhere to the expected format.
+   - **Solution:** Implemented input validation to ensure that the entered sales data follows the specified format of six numbers separated by commas.
+   
+2. **Error Handling for Google Sheets Operations**
+   - **Bug:** The system does not handle potential errors that may occur during interactions with Google Sheets, such as network errors or authentication issues.
+   - **Solution:** Implemented try-except blocks to handle potential errors during interactions with Google Sheets and provide informative error messages to the user.
+
+3. **Lack of Modularity**
+   - **Bug:** The main function (main) contains all the logic for interacting with Google Sheets and performing calculations, resulting in a lack of modularity and reusability.
+   - **Solution:** Refactor the code into smaller, modular functions with clearly defined responsibilities to enhance modularity and reusability.
 ### Deployment
 
 I would like to outline the necessary steps for deploying my application to Heroku. It's essential to note that Heroku serves as an excellent platform for managing and scaling back-end languages like Python. Deploying the work to Heroku will enable me to efficiently manage and scale our application as needed.
