@@ -13,10 +13,10 @@ This is the Code Institute student template for deploying your third portfolio p
 - Your code must be placed in the `run.py` file
 - Your dependencies must be placed in the `requirements.txt` file
 - Do not edit any of the other files or your code may not deploy properly
+![Flowchart](https://github.com/tochi-bot/LoveFruits/assets/77632001/5681cb80-295f-4692-9bae-d924bbd85626)
 
 ## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
 1. `heroku/python`
 2. `heroku/nodejs`
