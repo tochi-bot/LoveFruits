@@ -21,7 +21,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 # Open the Google Sheet named "LoveFruits" using the authorized client and assign it to the SHEET variable
 SHEET = GSPREAD_CLIENT.open("LoveFruits")
 
-
 def get_sales_info():
     """ 
     Get sales information from the user
@@ -40,25 +39,27 @@ def get_sales_info():
         if data_string.count(',') != 5:
             print("Invalid input. Please enter six numbers separated by commas.")
             continue
-
         try:
-            # Parse the input string into a list of integers
-            data = [int(value.strip()) for value in data_string.split(',')]
+            # Convert data to a string before returning
+            data = data_string
             print("Validating your data!")
             return data
         except ValueError:
             print("Invalid input. Please enter numeric values only.")
 
+
 def sales_worksheet_update(data):
     """ 
     Update sales worksheet with provided data.
     Parameters:
-    data (list): List containing sales data to be appended as a new row in the sales worksheet.
+    data (str): String containing sales data to be appended as a new row in the sales worksheet.
     """
     try:
         print("Sales worksheet updating...\n")
         sales_worksheet = SHEET.worksheet("sales")
-        sales_worksheet.append_row(data)
+        # Convert data to a list before appending
+        sales_data = data.split(',')
+        sales_worksheet.append_row(sales_data)
         print("Sales worksheet updated successfully")
     except Exception as e:
         print(f"Error updating sales worksheet: {e}")
@@ -68,12 +69,14 @@ def surplus_worksheet_update(data):
     """
     Update surplus worksheet with provided data.
     Parameters:
-    data (list): List containing surplus data to be appended as a new row in the surplus worksheet.
+    data (str): String containing surplus data to be appended as a new row in the surplus worksheet.
     """
     try:
         print("Surplus worksheet updating...\n")
         surplus_worksheet = SHEET.worksheet("surplus")
-        surplus_worksheet.append_row(data)
+        # Convert data to a list before appending
+        surplus_data = data.split(',')
+        surplus_worksheet.append_row(surplus_data)
         print("Surplus worksheet updated successfully")
     except Exception as e:
         print(f"Error updating surplus worksheet: {e}")
@@ -87,10 +90,13 @@ def worksheet_update(worksheet, data):
     try:
         print(f"Updating {worksheet} worksheet...\n")
         worksheet_to_update = SHEET.worksheet(worksheet)
-        worksheet_to_update.append_row(data)
+        # Convert data to a list before appending
+        worksheet_data = data.split(',')
+        worksheet_to_update.append_row(worksheet_data)
         print(f"{worksheet} worksheet updated successfully\n")
     except Exception as e:
         print(f"Error updating {worksheet} worksheet: {e}")
+
 
 def surplus_data_calculation(sales_row):
     """ 
