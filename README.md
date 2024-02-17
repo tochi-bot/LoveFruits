@@ -1,10 +1,14 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
 
 Welcome,
 
 This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
 
-## Reminders
+
+
+## Remin
+![Screenshot (152)](https://github.com/tochi-bot/LoveFruits/assets/77632001/ff8df4a4-e8f6-4e60-b675-7299ad9c20be)
+
 
 - Your code must be placed in the `run.py` file
 - Your dependencies must be placed in the `requirements.txt` file
