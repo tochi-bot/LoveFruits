@@ -1,32 +1,24 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+### User Experience
+## USER STORY
+As the manager of our local fruit store, I constantly grapple with the challenges of efficiently managing our daily market sales. Our current system relies on manual recording of sales data, a process prone to errors and inefficiencies.
 
-Welcome,
+This manual approach makes it challenging to maintain accurate inventory records, hindering our ability to identify surplus or shortages promptly. Without real-time visibility into our sales and stock levels, we struggle to make informed decisions regarding inventory management and pricing strategies.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+To overcome these hurdles, we urgently need an automated solution to streamline our sales tracking process. This solution should seamlessly integrate with our existing systems, enabling us to input daily sales data effortlessly, calculate surplus based on current stock levels, and update inventory accordingly.
+As a Python developer, I am committed to leveraging the Google Sheets API to develop a tailored application. This application will not only automate sales data entry and surplus calculations but also provide real-time visibility into our stock levels. With this tool at our disposal, we can make data-driven decisions and optimize our store operations effectively.
 
-## Reminders
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### Features
+## Introductory Message and Sales Input
+When you start the system, you'll receive a warm welcome along with initial instructions. To begin, enter the sales information for your most recent market. Our user-friendly interface will lead you step by step, ensuring precise data entry for each fruit type. Remember to separate each value with a comma, without any spaces or pound signs. An example of the correct data entry format is provided for your convenience.
 
-## Creating the Heroku app
+<img src="images/welcome.png">
+ Update Sales and Surplus Worksheets: Love Fruits Automation seamlessly updates your sales and surplus worksheets in Google Sheets, keeping your records up-to-date and easily accessible.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+<img src="/workspace/LoveFruits/node_modules/sales_works_.png">
+<img src="/workspace/LoveFruits/node_modules/updated%20surplus.png">
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
