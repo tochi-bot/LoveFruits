@@ -49,7 +49,6 @@ def get_sales_info():
         except ValueError:
             print("Invalid input. Please enter numeric values only.")
 
-
 def sales_worksheet_update(data):
     """ 
     Update sales worksheet with provided data.
@@ -58,14 +57,9 @@ def sales_worksheet_update(data):
     """
     try:
         print("Sales worksheet updating...\n")
-        # Parse the input string into a list of integers
-        data = [int(value.strip()) for value in data_string.split(',')]
-        print("Validating your data!")
         sales_worksheet = SHEET.worksheet("sales")
         sales_worksheet.append_row(data)
         print("Sales worksheet updated successfully")
-    except ValueError:
-        print("Invalid input. Please enter numeric values only.")
     except Exception as e:
         print(f"Error updating sales worksheet: {e}")
 
