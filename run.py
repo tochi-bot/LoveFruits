@@ -21,15 +21,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 # Open the Google Sheet named "LoveFruits" using the authorized client and assign it to the SHEET variable
 SHEET = GSPREAD_CLIENT.open("LoveFruits")
 
-# Access the "sales" worksheet within the "LoveFruits" spreadsheet
-sales = SHEET.worksheet("sales")
-
-# Retrieve all values from the "sales" worksheet and assign them to the data variable
-data = sales.get_all_values()
-
-# Print the retrieved data
-print(data)
-
 
 def get_sales_info():
     """ 
@@ -38,94 +29,132 @@ def get_sales_info():
     while True:
         # Prompt the user to enter sales information for the last market
         print("Please enter sales information for the last market")
+        print("Inputed fruits sold should start with Banana, Orange, Water Melon, Apple, Pear, Carrots")
         # Provide instructions for entering data
         print("Data should be six numbers, separated by comma")
         print("Example: 40,50,10,40,60,70\n")
         # Receive input from the user
-        data_string = input("Enter your data here:\n ")
-        # Print the entered data string
-        print(data_string)
-        
-        if data_string:
-            print("Your data is valid!")
-            # Return a list of integers obtained by splitting the input string
-            return [int(value.strip()) for value in data_string.split(',')]
+        data_string = input("Enter your data here:\n ").strip()
 
+        # Validate input format
+        if data_string.count(',') != 5:
+            print("Invalid input. Please enter six numbers separated by commas.")
+            continue
 
-try:
-    # Attempt to access the "Sales" worksheet within the "LoveFruits" spreadsheet
-    sales = SHEET.worksheet("Sales")
-except gspread.exceptions.WorksheetNotFound:
-    # If the worksheet is not found, print a message notifying the user
-    print("Worksheet named 'Sales' not found in the 'LoveFruits' spreadsheet.")
-    # Handle the error gracefully, such as creating the worksheet or notifying the user.
+        try:
+            # Parse the input string into a list of integers
+            data = [int(value.strip()) for value in data_string.split(',')]
+            print("Validating your data!")
+            return data
+        except ValueError:
+            print("Invalid input. Please enter numeric values only.")
 
-try:
-    # Call the get_sales_info function to prompt the user for input
-    data = get_sales_info()
-    # Check if the number of values entered is exactly 6
-    if len(data) != 6:
-        # If not, raise a ValueError with an appropriate message
-        raise ValueError(f"Exactly 6 values are required, you provided {len(data)}")
-except ValueError as e:
-    # If a ValueError occurs (e.g., incorrect number of values entered), print an error message
-    print(f"Invalid data: {e}, please try again\n")
-    exit(1)
 
 def sales_worksheet_update(data):
     """ 
     Update sales worksheet with provided data.
-
     Parameters:
     data (list): List containing sales data to be appended as a new row in the sales worksheet.
     """
-    print("Sales worksheet updating...\n")
-    sales_worksheet = SHEET.worksheet("sales")
-    sales_worksheet.append_row(data)
-    print("Sales worksheet updated successfully")
+    try:
+        print("Sales worksheet updating...\n")
+        sales_worksheet = SHEET.worksheet("sales")
+        sales_worksheet.append_row(data)
+        print("Sales worksheet updated successfully")
+    except Exception as e:
+        print(f"Error updating sales worksheet: {e}")
+
 
 def surplus_worksheet_update(data):
     """
     Update surplus worksheet with provided data.
-
     Parameters:
     data (list): List containing surplus data to be appended as a new row in the surplus worksheet.
     """
-    print("Surplus worksheet updating...\n")
-    surplus_worksheet = SHEET.worksheet("surplus")
-    surplus_worksheet.append_row(data)
-    print("Surplus worksheet updated successfully")
+    try:
+        print("Surplus worksheet updating...\n")
+        surplus_worksheet = SHEET.worksheet("surplus")
+        surplus_worksheet.append_row(data)
+        print("Surplus worksheet updated successfully")
+    except Exception as e:
+        print(f"Error updating surplus worksheet: {e}")
 
-def workshet_update(worksheet,data):
+
+def worksheet_update(worksheet, data):
     """
     Accepts a list of integers for insertion into the worksheet and
     updates the corresponding worksheet with the provided data. 
     """
-    print(f"Updating {worksheet} worksheet...\n")
-    worksheet_to_update=SHEET.worksheet(worksheet)
-    worksheet_to_update.append(data)
-    print(f"{worksheet} workheet updated successfully\n")
+    try:
+        print(f"Updating {worksheet} worksheet...\n")
+        worksheet_to_update = SHEET.worksheet(worksheet)
+        worksheet_to_update.append_row(data)
+        print(f"{worksheet} worksheet updated successfully\n")
+    except Exception as e:
+        print(f"Error updating {worksheet} worksheet: {e}")
 
 def surplus_data_calculation(sales_row):
     """ 
     Calculate surplus for each item type based on sales and stock data.
-
     Parameters:
     sales_row (list): List containing sales data for each item type.
-
     Returns:
     list: List containing calculated surplus for each item type.
     """
-    print("Calculating surplus data...\n")
-    stock = SHEET.worksheet("stock").get_all_values()
-    stock_row = stock[-1]
-    print(f"Stock row: {stock_row}")
-    print(f"Sales row: {sales_row}")
-    surplus_data = []
-    for stock, sales in zip(stock_row, sales_row):
-        surplus = int(stock) - sales
-        surplus_data.append(surplus)
-    return surplus_data
+    try:
+        print("Calculating surplus data...\n")
+        stock = SHEET.worksheet("stock").get_all_values()
+        # Extract the last row of stock data, 
+        stock_row = stock[-1]
+        surplus_data = []
+        for stock_item, sales_item in zip(stock_row, sales_row):
+            # Check if both stock_item and sales_item are convertible to integers
+            if stock_item.isdigit() and isinstance(sales_item, int):
+                surplus = int(stock_item) - sales_item
+                surplus_data.append(surplus)
+        return surplus_data
+    except Exception as e:
+        print(f"Error calculating surplus data: {e}")
+        return None
+
+
+
+
+def get_last_6_entries_sales():
+    """
+    Compute the columns of data from the sales worksheet, gathering the last six entries of LoveFruits, 
+    and return the data as a list of lists.
+    """
+    try:
+        sales_worksheet = SHEET.worksheet("sales")
+        columns = []
+        for add in range(1, 7):
+            column = sales_worksheet.col_values(add)
+            columns.append(column[-6:])
+        return columns
+    except Exception as e:
+        print(f"Error retrieving last 6 entries of sales data: {e}")
+        return None
+
+def compute_stock_data(data):
+    """ 
+    Calculate the average stock for each item type, increasing it by 30%.
+    """
+    try:
+        print("Computing average stock data...\n")
+        new_stock_data = []
+        for column in data:
+            if column:
+                int_column = [int(num) for num in column if num.isdigit()]  # Filter non-numeric values
+                if int_column:  # Check if int_column is not empty
+                    mean = sum(int_column) / len(int_column)
+                    stock_num = mean * 1.3
+                    new_stock_data.append(stock_num)
+        return new_stock_data
+    except Exception as e:
+        print(f"Error computing average stock data: {e}") 
+        return None
+
 
 def main():
     """
@@ -133,9 +162,11 @@ def main():
     """
     data = get_sales_info()
     sales_worksheet_update(data)
-    new_surplus_data = surplus_data_calculation(data)
-    surplus_worksheet_update(new_surplus_data)
-    print(new_surplus_data)
+    surplus_worksheet_update(data)
+    worksheet_update("sales", data) 
+    sales_row = get_last_6_entries_sales()
+    surplus_data = surplus_data_calculation(sales_row)
+    compute_stock_data(surplus_data)
 
-print("Welcome to Love Fruits Automation")
+print("Welcome to Love Fruits Automation System, your comprehensive solution for efficient fruit market management")
 main()
