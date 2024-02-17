@@ -17,6 +17,8 @@ As a Python developer, I am committed to leveraging the Google Sheets API to dev
 
 #### Introductory Message and Sales Input
 
+![complete date](https://github.com/tochi-bot/LoveFruits/assets/77632001/e7020ff5-d742-4eb3-a13b-bb6d72ad6c06)
+
 When you start the system, you'll receive a warm welcome along with initial instructions. To begin, enter the sales information for your most recent market. Our user-friendly interface will lead you step by step, ensuring precise data entry for each fruit type. Remember to separate each value with a comma, without any spaces or pound signs. An example of the correct data entry format is provided for your convenience.
 ![Screenshot 2024-02-17 160912](https://github.com/tochi-bot/LoveFruits/assets/77632001/7976eefe-8945-4fb0-a67e-ce531e94adaa)
 
@@ -28,6 +30,8 @@ When you start the system, you'll receive a warm welcome along with initial inst
 ![updated surplus](https://github.com/tochi-bot/LoveFruits/assets/77632001/13202163-bf59-4b77-95f0-4fea6aee3ad3)
 
 LoveFruits Automation seamlessly updates your sales and surplus worksheets in Google Sheets, keeping your records up-to-date and easily accessible.
+
+![complete data](https://github.com/tochi-bot/LoveFruits/assets/77632001/061e3d39-ac04-430c-94b5-30c3fee6df03)
 
 #### LoveFruits Google Worksheet View
 
