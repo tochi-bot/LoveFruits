@@ -20,6 +20,15 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 
 # Open the Google Sheet named "LoveFruits" using the authorized client and assign it to the SHEET variable
 SHEET = GSPREAD_CLIENT.open("LoveFruits")
+print('''
+#       ######  #     # ######     ####### ######  #     #  #   ######  #####  
+#       #     # #     # #          #       #     # #     #  #     #    #     # 
+#       #     # #     # #          #       #     # #     #  #     #    #       
+#       #     # #     # #####      #####   ######  #     #  #     #     #####  
+#       #     #  #   #  #          #       #   #   #     #  #     #          # 
+#       #     #   # #   #          #       #    #  #     #  #     #    #     # 
+####### #######    #    #######    #       #     #  #####  ###    #     #####  
+''')
 
 def get_sales_info():
     """ 
