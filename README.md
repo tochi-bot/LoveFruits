@@ -51,7 +51,7 @@ When you start the system, you'll receive a warm welcome along with initial inst
 
 ![user choice MED  result](https://github.com/tochi-bot/LoveFruits/assets/77632001/b4c8e8f5-d4ed-4533-a54e-a7514a50dc2d)
 
-### Ivalid User Chioces Input
+### Invalid User Choices Input
 
 ![invalid user choice](https://github.com/tochi-bot/LoveFruits/assets/77632001/22daa3b6-783a-4ba6-bbe6-39a2cb0de35d)
 
@@ -67,16 +67,6 @@ The Google worksheet was set to read-only for users without editing permissions.
 
 
 This flowchart represents the sequential execution of the main function. Each block represents a function call, and arrows indicate the flow of data and control from one step to another. The decision points are minimal in this particular code, so the flow is mostly linear.
-
-#### Worksheet Overview: Sales, Surplus, Stock
-
-The worksheet serves as a repository for historical data entries as well as the latest data provided by the NDoS. These sheets provide a comprehensive overview of past sales, surplus, and stock information along with the most recent updates submitted by the NDoS.
-
-![Worksheet Overview:Sales](image.png)
-
-![Worksheet Overview:Surplus](image-1.png)
-
-![Worksheet Overview: Stock](image-2.png)
 
 ---
 # Testing
