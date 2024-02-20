@@ -1,28 +1,27 @@
 **README: Love Fruits Automation System**
 
-**Project Introduction:**
+**Introduction:**
 
-Welcome to Love Fruits Automation System, an innovative tool designed to streamline fruit market management efficiently. This automation application aims to provide users with a seamless experience in handling sales, stock, and surplus data for various fruit items. With Love Fruits Automation System, users can effortlessly input their sales information, update relevant worksheets, and perform calculations to optimize their fruit market operations.
+Welcome to the Love Fruits Automation System! This project aims to simplify the process of managing fruit market data through automation. Whether you're a student working on a project or an enthusiast interested in optimizing market management, this system is designed to streamline your tasks effectively.
 
-**Project Aims:**
+**Aims:**
 
-The primary goal of the Love Fruits Automation System is to simplify the process of managing fruit market data. Specifically, the project aims to achieve the following objectives:
+1. **Efficiency:** Reduce the time and effort required for data entry and calculation tasks.
+2. **Accuracy:** Ensure precise calculations and data management, minimizing errors.
+3. **Convenience:** Provide a user-friendly interface for seamless interaction and operation.
 
-1. **Efficient Data Input:** Enable users to input sales data easily and accurately.
-2. **Automated Worksheet Updates:** Update sales and surplus worksheets promptly based on user input.
-3. **Surplus Calculation:** Calculate surplus for each fruit item type based on sales and stock data.
-4. **Stock Optimization:** Compute average stock for each item type, enhancing inventory management.
+**How to Use:**
 
-**User Input Procedure:**
+1. **Set Up Google Sheets:** Ensure you have access to Google Sheets and have a spreadsheet named "LoveFruits" created.
+2. **Install Dependencies:** Make sure you have the required dependencies installed, including `gspread` and `google.oauth2`.
+3. **Provide Credentials:** Prepare your Google service account credentials in a JSON file named "creds.json" to enable access to Google Sheets.
+4. **Run the Code:** Execute the provided Python script to launch the Love Fruits Automation System.
+5. **Enter Data:** Follow the prompts to enter sales information for the last market, specifying sales numbers for various fruits.
+6. **Choose Calculation:** Select the desired calculation option (AVG, TOT, or MED) to compute the average, total, or median stock data, respectively.
+7. **Review Results:** View the calculated stock data provided by the system for your analysis and decision-making.
 
-To input data into the Love Fruits Automation System, users follow these steps:
+Enjoy the convenience and efficiency of the Love Fruits Automation System for your fruit market management needs!
 
-1. Run the provided Python script.
-2. Input sales information for the last market when prompted.
-3. Ensure that the entered data adheres to the specified format: six numbers separated by commas, corresponding to Banana, Orange, Water Melon, Apple, Pear, and Carrots sales.
-4. The system will validate the input and proceed with updating the relevant worksheets accordingly.
-
-By following these steps, users can effectively utilize the automation application to manage their fruit market data effortlessly.
 ![Responsive devices](https://github.com/tochi-bot/LoveFruits/assets/77632001/40769c60-56ea-451e-a06e-37fc90199d15)
 ### User Story
 ### User Experience
