@@ -24,24 +24,35 @@ Enjoy the convenience and efficiency of the Love Fruits Automation System for yo
 
 ![Responsive devices](https://github.com/tochi-bot/LoveFruits/assets/77632001/40769c60-56ea-451e-a06e-37fc90199d15)
 ### User Story
-As a fruit market manager, I want to automate the process of calculating stock data to streamline my tasks and ensure accurate results.
+**As a fruit market manager, I want to automate the process of calculating stock data to streamline my tasks and ensure accurate results.
 ---
 
 ### Features
 
 #### Introductory Message and Sales Input
 
-![complete date](https://github.com/tochi-bot/LoveFruits/assets/77632001/e7020ff5-d742-4eb3-a13b-bb6d72ad6c06)
+
+![welcome message](https://github.com/tochi-bot/LoveFruits/assets/77632001/aa18d68b-6863-4abf-84f9-caa9bdc067c9)
 
 When you start the system, you'll receive a warm welcome along with initial instructions. To begin, enter the sales information for your most recent market. Our user-friendly interface will lead you step by step, ensuring precise data entry for each fruit type. Remember to separate each value with a comma, without any spaces or pound signs. An example of the correct data entry format is provided for your convenience.
 ![Screenshot 2024-02-17 160912](https://github.com/tochi-bot/LoveFruits/assets/77632001/7976eefe-8945-4fb0-a67e-ce531e94adaa)
 
 
-#### Update Sales and Surplus Worksheets
+#### User Entry Choices
 
-![updated sales_worksheet](https://github.com/tochi-bot/LoveFruits/assets/77632001/903f42a6-bc0d-4b70-bcd8-551c4d4cd01b)
 
-![updated surplus](https://github.com/tochi-bot/LoveFruits/assets/77632001/13202163-bf59-4b77-95f0-4fea6aee3ad3)
+![user data choice](https://github.com/tochi-bot/LoveFruits/assets/77632001/486ce8a5-7343-45ac-bd8b-bf2e4ea4313e)
+
+### User AVG Choice And Result
+![user AVG  result](https://github.com/tochi-bot/LoveFruits/assets/77632001/a2b5eafc-1e17-4f1a-9528-369ac28707f7)
+
+### User TOT Choice And Result
+
+![user choice TOT result](https://github.com/tochi-bot/LoveFruits/assets/77632001/69ff35c4-76f8-4ea2-b641-db919efe401e)
+
+### User MED Choice And Result
+
+![user choice MED  result](https://github.com/tochi-bot/LoveFruits/assets/77632001/b4c8e8f5-d4ed-4533-a54e-a7514a50dc2d)
 
 LoveFruits Automation seamlessly updates your sales and surplus worksheets in Google Sheets, keeping your records up-to-date and easily accessible.
 
