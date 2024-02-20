@@ -24,16 +24,7 @@ Enjoy the convenience and efficiency of the Love Fruits Automation System for yo
 
 ![Responsive devices](https://github.com/tochi-bot/LoveFruits/assets/77632001/40769c60-56ea-451e-a06e-37fc90199d15)
 ### User Story
-### User Experience
-
-As the manager of our local fruit store, I constantly grapple with the challenges of efficiently managing our daily market sales. Our current system relies on manual recording of sales data, a process prone to errors and inefficiencies.
-
-This manual approach makes it challenging to maintain accurate inventory records, hindering our ability to identify surplus or shortages promptly. Without real-time visibility into our sales and stock levels, we struggle to make informed decisions regarding inventory management and pricing strategies.
-
-To overcome these hurdles, we urgently need an automated solution to streamline our sales tracking process. This solution should seamlessly integrate with our existing systems, enabling us to input daily sales data effortlessly, calculate surplus based on current stock levels, and update inventory accordingly.
-
-As a Python developer, I am committed to leveraging the Google Sheets API to develop a tailored application. This application will not only automate sales data entry and surplus calculations but also provide real-time visibility into our stock levels. With this tool at our disposal, we can make data-driven decisions and optimize our store operations effectively.
-
+As a fruit market manager, I want to automate the process of calculating stock data to streamline my tasks and ensure accurate results.
 ---
 
 ### Features
