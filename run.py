@@ -99,6 +99,6 @@ def main():
     data = get_sales_info()
     calculate_data(data)
 
-print("Welcome to Love Fruits Automation System")
-print("Your comprehensive solution for efficient fruit market management")
+print("Welcome to Love Fruits Automation System\n")
+print("Your comprehensive solution for efficient fruit market management\n")
 main()
