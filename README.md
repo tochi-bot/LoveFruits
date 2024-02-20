@@ -24,7 +24,7 @@ To input data into the Love Fruits Automation System, users follow these steps:
 
 By following these steps, users can effectively utilize the automation application to manage their fruit market data effortlessly.
 ![Responsive devices](https://github.com/tochi-bot/LoveFruits/assets/77632001/40769c60-56ea-451e-a06e-37fc90199d15)
-
+### User Story
 ### User Experience
 
 As the manager of our local fruit store, I constantly grapple with the challenges of efficiently managing our daily market sales. Our current system relies on manual recording of sales data, a process prone to errors and inefficiencies.
