@@ -27,13 +27,19 @@ def get_sales_info():
     """
     while True:
         # Prompt the user to enter sales information for the last market
-        print("Please enter sales information for the last market")
-        print("Inputed fruits sold should start with Banana, Orange, Water Melon, Apple, Pear, Carrots")
+        print("Please enter sales information for the last market\n \n")
+        print("Enter sales numbers for the following fruits\n")
+        print(" Banana, Orange, Water Melon, Apple, Pear, Carrots\n")
         # Provide instructions for entering data
-        print("Data should be six numbers, separated by comma")
+        print(" options")
+        print("1. Calculate average stock data:  press AVG")
+        print("2. Calculate total stock tata  press Tot\n")
+        print("3. Calculate median stock data press: MED\n")
+        print(" Please note that Data should be six numbers, separated by comma\n \n")
         print("Example: 40,50,10,40,60,70\n")
         # Receive input from the user
-        data_string = input("Enter your data here:\n ").strip()
+        data_choices= input("Enter your data choice:\n ").strip()
+        data_string = input("Enter your data choice:\n ").strip()
 
         # Validate input format
         if data_string.count(',') != 5:
@@ -173,5 +179,6 @@ def main():
     surplus_data = surplus_data_calculation(sales_row)
     compute_stock_data(surplus_data)
 
-print("Welcome to Love Fruits Automation System, your comprehensive solution for efficient fruit market management")
+print("Welcome to Love Fruits Automation System")
+print("your comprehensive solution for efficient fruit market management")
 main()
