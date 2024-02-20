@@ -1,4 +1,28 @@
+**README: Love Fruits Automation System**
 
+**Project Introduction:**
+
+Welcome to Love Fruits Automation System, an innovative tool designed to streamline fruit market management efficiently. This automation application aims to provide users with a seamless experience in handling sales, stock, and surplus data for various fruit items. With Love Fruits Automation System, users can effortlessly input their sales information, update relevant worksheets, and perform calculations to optimize their fruit market operations.
+
+**Project Aims:**
+
+The primary goal of the Love Fruits Automation System is to simplify the process of managing fruit market data. Specifically, the project aims to achieve the following objectives:
+
+1. **Efficient Data Input:** Enable users to input sales data easily and accurately.
+2. **Automated Worksheet Updates:** Update sales and surplus worksheets promptly based on user input.
+3. **Surplus Calculation:** Calculate surplus for each fruit item type based on sales and stock data.
+4. **Stock Optimization:** Compute average stock for each item type, enhancing inventory management.
+
+**User Input Procedure:**
+
+To input data into the Love Fruits Automation System, users follow these steps:
+
+1. Run the provided Python script.
+2. Input sales information for the last market when prompted.
+3. Ensure that the entered data adheres to the specified format: six numbers separated by commas, corresponding to Banana, Orange, Water Melon, Apple, Pear, and Carrots sales.
+4. The system will validate the input and proceed with updating the relevant worksheets accordingly.
+
+By following these steps, users can effectively utilize the automation application to manage their fruit market data effortlessly.
 ![Responsive devices](https://github.com/tochi-bot/LoveFruits/assets/77632001/40769c60-56ea-451e-a06e-37fc90199d15)
 
 ### User Experience
