@@ -33,29 +33,38 @@ Enjoy the convenience and efficiency of the Love Fruits Automation System for yo
 
 #### Introductory Message and Sales Input
 
-
 ![welcome message](https://github.com/tochi-bot/LoveFruits/assets/77632001/aa18d68b-6863-4abf-84f9-caa9bdc067c9)
 
 When you start the system, you'll receive a warm welcome along with initial instructions. To begin, enter the sales information for your most recent market. Our user-friendly interface will lead you step by step, ensuring precise data entry for each fruit type. Remember to separate each value with a comma, without any spaces or pound signs. An example of the correct data entry format is provided for your convenience.
 
 #### User Entry Choices
 
-![user data choice](https://github.com/tochi-bot/LoveFruits/assets/77632001/486ce8a5-7343-45ac-bd8b-bf2e4ea4313e)
+![Welcome message ](https://github.com/tochi-bot/LoveFruits/assets/77632001/2e7fc3ed-5c43-4ec4-9dbf-62786f23bdce)
 
 ### User AVG Choice And Result
-![user AVG  result](https://github.com/tochi-bot/LoveFruits/assets/77632001/a2b5eafc-1e17-4f1a-9528-369ac28707f7)
+
+![AVG](https://github.com/tochi-bot/LoveFruits/assets/77632001/472f759e-34e1-4eba-ac01-6d4a62be50ef)
 
 ### User TOT Choice And Result
-
-![user choice TOT result](https://github.com/tochi-bot/LoveFruits/assets/77632001/69ff35c4-76f8-4ea2-b641-db919efe401e)
+![Total stock data](https://github.com/tochi-bot/LoveFruits/assets/77632001/d9171300-16b7-4d9e-a79d-26d0cfc218dd)
 
 ### User MED Choice And Result
 
-![user choice MED  result](https://github.com/tochi-bot/LoveFruits/assets/77632001/b4c8e8f5-d4ed-4533-a54e-a7514a50dc2d)
+![MED data](https://github.com/tochi-bot/LoveFruits/assets/77632001/162c3d6d-32ab-4bb5-95a2-debf05a4d2a3)
+
+### User Sale Worksheet Updated
+![sales data update](https://github.com/tochi-bot/LoveFruits/assets/77632001/624c62b6-7d5f-4f7d-bbeb-35dbf6765e11)
+
+### User Surplus Worksheet Updated
+
+![surplus data update](https://github.com/tochi-bot/LoveFruits/assets/77632001/2442b083-f491-45ce-a4f0-f38509e7cfef)
 
 ### Invalid User Choices Input
 
-![invalid user choice](https://github.com/tochi-bot/LoveFruits/assets/77632001/22daa3b6-783a-4ba6-bbe6-39a2cb0de35d)
+![Invalid choice](https://github.com/tochi-bot/LoveFruits/assets/77632001/3507c26e-b6f5-4cfe-9539-946c0bf7d94f)
+### Invalid User Entry
+
+![Invalid user input](https://github.com/tochi-bot/LoveFruits/assets/77632001/274b1840-b11e-465a-8fca-7ed2b5652cab)
 
 
 #### LoveFruits Google Worksheet View
