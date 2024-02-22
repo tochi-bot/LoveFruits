@@ -21,7 +21,8 @@ Welcome to the Love Fruits Automation System! This project aims to simplify the 
 7. **Review Results:** View the calculated stock data provided by the system for your analysis and decision-making.
 
 Enjoy the convenience and efficiency of the Love Fruits Automation System for your fruit market management needs!
-![Am i responsive](https://github.com/tochi-bot/LoveFruits/assets/77632001/0e66773c-57a9-497e-85eb-48fba6f5a4e8)
+
+![REsponsive image](https://github.com/tochi-bot/LoveFruits/assets/77632001/84bc0890-2644-4cbf-8310-f17a6ecf7610)
 
 
 ### User Story
