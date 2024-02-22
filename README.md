@@ -1,61 +1,61 @@
 **README: Love Fruits Automation System**
 
-**Project Introduction:**
+**Introduction:**
 
-Welcome to Love Fruits Automation System, an innovative tool designed to streamline fruit market management efficiently. This automation application aims to provide users with a seamless experience in handling sales, stock, and surplus data for various fruit items. With Love Fruits Automation System, users can effortlessly input their sales information, update relevant worksheets, and perform calculations to optimize their fruit market operations.
+Welcome to the Love Fruits Automation System! This project aims to simplify the process of managing fruit market data through automation. Whether you're a student working on a project or an enthusiast interested in optimizing market management, this system is designed to streamline your tasks effectively.
 
-**Project Aims:**
+**Aims:**
 
-The primary goal of the Love Fruits Automation System is to simplify the process of managing fruit market data. Specifically, the project aims to achieve the following objectives:
+1. **Efficiency:** Reduce the time and effort required for data entry and calculation tasks.
+2. **Accuracy:** Ensure precise calculations and data management, minimizing errors.
+3. **Convenience:** Provide a user-friendly interface for seamless interaction and operation.
 
-1. **Efficient Data Input:** Enable users to input sales data easily and accurately.
-2. **Automated Worksheet Updates:** Update sales and surplus worksheets promptly based on user input.
-3. **Surplus Calculation:** Calculate surplus for each fruit item type based on sales and stock data.
-4. **Stock Optimization:** Compute average stock for each item type, enhancing inventory management.
+**How to Use:**
 
-**User Input Procedure:**
+1. **Set Up Google Sheets:** Ensure you have access to Google Sheets and have a spreadsheet named "LoveFruits" created.
+2. **Install Dependencies:** Make sure you have the required dependencies installed, including `gspread` and `google.oauth2`.
+3. **Provide Credentials:** Prepare your Google service account credentials in a JSON file named "creds.json" to enable access to Google Sheets.
+4. **Run the Code:** Execute the provided Python script to launch the Love Fruits Automation System.
+5. **Enter Data:** Follow the prompts to enter sales information for the last market, specifying sales numbers for various fruits.
+6. **Choose Calculation:** Select the desired calculation option (AVG, TOT, or MED) to compute the average, total, or median stock data, respectively.
+7. **Review Results:** View the calculated stock data provided by the system for your analysis and decision-making.
 
-To input data into the Love Fruits Automation System, users follow these steps:
+Enjoy the convenience and efficiency of the Love Fruits Automation System for your fruit market management needs!
+![Am i responsive](https://github.com/tochi-bot/LoveFruits/assets/77632001/0e66773c-57a9-497e-85eb-48fba6f5a4e8)
 
-1. Run the provided Python script.
-2. Input sales information for the last market when prompted.
-3. Ensure that the entered data adheres to the specified format: six numbers separated by commas, corresponding to Banana, Orange, Water Melon, Apple, Pear, and Carrots sales.
-4. The system will validate the input and proceed with updating the relevant worksheets accordingly.
 
-By following these steps, users can effectively utilize the automation application to manage their fruit market data effortlessly.
-![Responsive devices](https://github.com/tochi-bot/LoveFruits/assets/77632001/40769c60-56ea-451e-a06e-37fc90199d15)
 ### User Story
-### User Experience
-
-As the manager of our local fruit store, I constantly grapple with the challenges of efficiently managing our daily market sales. Our current system relies on manual recording of sales data, a process prone to errors and inefficiencies.
-
-This manual approach makes it challenging to maintain accurate inventory records, hindering our ability to identify surplus or shortages promptly. Without real-time visibility into our sales and stock levels, we struggle to make informed decisions regarding inventory management and pricing strategies.
-
-To overcome these hurdles, we urgently need an automated solution to streamline our sales tracking process. This solution should seamlessly integrate with our existing systems, enabling us to input daily sales data effortlessly, calculate surplus based on current stock levels, and update inventory accordingly.
-
-As a Python developer, I am committed to leveraging the Google Sheets API to develop a tailored application. This application will not only automate sales data entry and surplus calculations but also provide real-time visibility into our stock levels. With this tool at our disposal, we can make data-driven decisions and optimize our store operations effectively.
-
+**As a fruit market manager, I want to automate the process of calculating stock data to streamline my tasks and ensure accurate results.
 ---
 
 ### Features
 
 #### Introductory Message and Sales Input
 
-![complete date](https://github.com/tochi-bot/LoveFruits/assets/77632001/e7020ff5-d742-4eb3-a13b-bb6d72ad6c06)
+
+![welcome message](https://github.com/tochi-bot/LoveFruits/assets/77632001/aa18d68b-6863-4abf-84f9-caa9bdc067c9)
 
 When you start the system, you'll receive a warm welcome along with initial instructions. To begin, enter the sales information for your most recent market. Our user-friendly interface will lead you step by step, ensuring precise data entry for each fruit type. Remember to separate each value with a comma, without any spaces or pound signs. An example of the correct data entry format is provided for your convenience.
-![Screenshot 2024-02-17 160912](https://github.com/tochi-bot/LoveFruits/assets/77632001/7976eefe-8945-4fb0-a67e-ce531e94adaa)
 
+#### User Entry Choices
 
-#### Update Sales and Surplus Worksheets
+![user data choice](https://github.com/tochi-bot/LoveFruits/assets/77632001/486ce8a5-7343-45ac-bd8b-bf2e4ea4313e)
 
-![updated sales_worksheet](https://github.com/tochi-bot/LoveFruits/assets/77632001/903f42a6-bc0d-4b70-bcd8-551c4d4cd01b)
+### User AVG Choice And Result
+![user AVG  result](https://github.com/tochi-bot/LoveFruits/assets/77632001/a2b5eafc-1e17-4f1a-9528-369ac28707f7)
 
-![updated surplus](https://github.com/tochi-bot/LoveFruits/assets/77632001/13202163-bf59-4b77-95f0-4fea6aee3ad3)
+### User TOT Choice And Result
 
-LoveFruits Automation seamlessly updates your sales and surplus worksheets in Google Sheets, keeping your records up-to-date and easily accessible.
+![user choice TOT result](https://github.com/tochi-bot/LoveFruits/assets/77632001/69ff35c4-76f8-4ea2-b641-db919efe401e)
 
-![complete data](https://github.com/tochi-bot/LoveFruits/assets/77632001/061e3d39-ac04-430c-94b5-30c3fee6df03)
+### User MED Choice And Result
+
+![user choice MED  result](https://github.com/tochi-bot/LoveFruits/assets/77632001/b4c8e8f5-d4ed-4533-a54e-a7514a50dc2d)
+
+### Invalid User Choices Input
+
+![invalid user choice](https://github.com/tochi-bot/LoveFruits/assets/77632001/22daa3b6-783a-4ba6-bbe6-39a2cb0de35d)
+
 
 #### LoveFruits Google Worksheet View
 
@@ -68,16 +68,6 @@ The Google worksheet was set to read-only for users without editing permissions.
 
 
 This flowchart represents the sequential execution of the main function. Each block represents a function call, and arrows indicate the flow of data and control from one step to another. The decision points are minimal in this particular code, so the flow is mostly linear.
-
-#### Worksheet Overview: Sales, Surplus, Stock
-
-The worksheet serves as a repository for historical data entries as well as the latest data provided by the NDoS. These sheets provide a comprehensive overview of past sales, surplus, and stock information along with the most recent updates submitted by the NDoS.
-
-![Worksheet Overview:Sales](image.png)
-
-![Worksheet Overview:Surplus](image-1.png)
-
-![Worksheet Overview: Stock](image-2.png)
 
 ---
 # Testing
