@@ -74,7 +74,8 @@ Now that the Network Denial of Service (NDoS) team has reviewed the recommendati
 The Google worksheet was set to read-only for users without editing permissions. Only the NDoS team and senior management have the necessary access to modify the file. This precautionary measure is implemented to minimize the risk of inadvertent changes being made to the worksheet.
 
 #### Flowchart
-![Flowchart](https://github.com/tochi-bot/LoveFruits/assets/77632001/37a65b63-c8e1-4207-8610-3c6d8bf2d6e1)
+
+![FLowchart](https://github.com/tochi-bot/LoveFruits/assets/77632001/761f2c26-2215-4405-a49d-a0835fbe6da3)
 
 
 This flowchart represents the sequential execution of the main function. Each block represents a function call, and arrows indicate the flow of data and control from one step to another. The decision points are minimal in this particular code, so the flow is mostly linear.
