@@ -43,13 +43,15 @@ def get_sales_info():
         print("Options:")
         print("1. Calculate average stock data:  press AVG")
         print("2. Calculate total stock data:  press TOT")
-        print("3. Calculate median stock data: press MED\n")
+        print("3. Calculate median stock data: press MED")
+        print("4' Update sales worksheet:      press SALES")
+        print("5. Update surplus worksheet:    press SURPLU ")
         print("Please note that Data should be six numbers, separated by comma\n")
         print("Example: 40,50,10,40,60,70\n")
         # Receive input from the user
         data_choices = input("Enter your data choice: ").strip().upper()
 
-        if data_choices not in ["AVG", "TOT", "MED"]:
+        if data_choices not in ["AVG", "TOT", "MED", "SALES", "SURPLUS"]:
             print("Invalid choice. Please enter either AVG, TOT, or MED.")
             continue
 
@@ -66,6 +68,10 @@ def get_sales_info():
             return data
         except ValueError:
             print("Invalid input. Please enter numeric values only.")
+        except Exception as e:
+           print(f"Error updating sales worksheet: {e}")
+        except Exception as e:
+           print(f"Error updating surplus worksheet: {e}")
 
 
 def calculate_data(data):
@@ -90,7 +96,14 @@ def calculate_data(data):
         else:
             median = sorted_sales[len(sorted_sales)//2]
         print(f"Median stock data: {median}")
-
+    elif choice == "SALES":
+          sales_worksheet = SHEET.worksheet("sales")
+          sales_worksheet.append_row(data)
+          print("Sales worksheet updated successfully\n")
+    elif choice == "SURPLUS":
+         surplus_worksheet = SHEET.worksheet("surplus")
+         surplus_worksheet.append_row(data)
+         print("Surplus worksheet updated successfully\n")
 
 def main():
     """
